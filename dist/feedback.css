@@ -1,0 +1,53 @@
+/* Slower, image-led motion; the artwork stays in front of the ambient smoke. */
+.work-toolbar{justify-content:space-between}.work-toolbar>.micro-label{color:var(--muted);font-size:9px;letter-spacing:1.5px}
+.project-image{border-radius:3px;transition:border-radius 1s var(--ease-out),transform .8s var(--ease-out)}
+.project-image img{transition:transform 1.35s var(--ease-out),filter 1s}
+.image-autumn img{object-fit:contain;object-position:center;background:#080b0c}
+.image-mech img{object-fit:cover;object-position:center}
+.project-image .project-open{transition:transform .8s var(--ease-out),background .5s,border-color .5s}
+.motion-preview{pointer-events:none}
+.project-image>.motion-preview{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .7s;z-index:1}
+.project-image.is-playing>.motion-preview{opacity:1}
+.project-image.has-motion:after{z-index:1}
+.video-preview{display:block;position:relative;width:100%;padding:0;overflow:hidden;background:#080a09;border:1px solid var(--line);border-radius:5px;cursor:pointer}
+.video-preview .motion-preview{display:block;width:100%;height:auto;max-height:62svh;object-fit:contain;transition:transform 1.2s var(--ease-out)}
+.video-hint{position:absolute;right:22px;bottom:22px;background:rgba(14,17,16,.85);border:1px solid #ffffff40;border-radius:30px;padding:15px 20px;font:10px var(--mono);letter-spacing:1px;backdrop-filter:blur(12px);transition:background .4s,transform .7s var(--ease-out)}
+.video-stage{display:grid;place-items:center;min-height:50svh;flex:1;min-width:0;padding:16px}
+.video-stage video{width:100%;max-height:78svh;object-fit:contain;background:#070908}
+.video-viewer{height:auto;max-height:96svh}
+.project-scene{display:block;padding:36px 30px}
+.scene-heading{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:22px}
+.scene-heading h3{font:11px var(--mono);letter-spacing:1.6px;color:var(--orange)}
+.scene-heading p{font-size:9px}
+.scene-stage{position:relative;isolation:isolate;width:100%;height:clamp(350px,65svh,680px);background:#090b0b;overflow:hidden;border:1px solid var(--line);border-radius:5px}
+.scene-stage>img{width:100%;height:100%;object-fit:contain;opacity:.55;transition:opacity .5s}
+.scene-mount{position:absolute;inset:0;z-index:1}
+.scene-mount:empty{pointer-events:none}
+.scene-start{position:absolute;z-index:2;top:50%;left:50%;transform:translate(-50%,-50%);border:1px solid #ffffff60;border-radius:40px;background:#151a19e8;padding:20px 25px;white-space:nowrap;font:10px var(--mono);letter-spacing:.8px;backdrop-filter:blur(12px)}
+.scene-start:disabled{pointer-events:none;opacity:.7}.scene-start[hidden]{display:none}
+.scene-status{margin-top:15px;min-height:18px}.scene-stage.is-loaded>img{opacity:0}
+#project-dialog[open]{animation:none}
+::view-transition-group(project-art){animation-duration:.85s;animation-timing-function:cubic-bezier(.22,1,.36,1)}
+::view-transition-old(project-art),::view-transition-new(project-art){height:100%;object-fit:cover;mix-blend-mode:normal}
+::view-transition-old(root){animation:page-away .32s ease both}
+::view-transition-new(root){animation:page-arrive .7s .08s both}
+@keyframes page-away{to{opacity:0}}
+@keyframes page-arrive{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media(hover:hover) and (pointer:fine){
+  .project-image:hover{border-radius:20px}.project-image:hover img{transform:scale(1.045);filter:brightness(1.035)}
+  .project-image:hover .project-open{transform:rotate(45deg) scale(1.08)}
+  .video-preview:hover .video-hint{background:var(--orange);color:var(--bg);transform:translateY(-4px)}
+  .scene-start:hover{background:var(--orange);color:var(--bg)}
+}
+@media(max-width:760px){
+  .work-toolbar{display:flex;padding:4px 0 24px}.project-count{display:block;font-size:8px}
+  .project-scene{padding:28px 18px}.scene-heading{display:block}.scene-heading p{margin-top:12px;font-size:8px}
+  .scene-stage{height:55svh;min-height:330px}.scene-start{padding:18px 20px;font-size:9px}
+  .video-hint{right:12px;bottom:12px;padding:12px 16px;font-size:9px}
+  .video-stage{padding:5px;min-height:30svh}
+}
+@media(prefers-reduced-motion:reduce){
+  .project-image,.project-image img,.project-image>.motion-preview,.video-hint{transition:none}
+  .project-image:hover img{transform:none}
+  ::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}
+}

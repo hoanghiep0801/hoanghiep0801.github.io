@@ -1,0 +1,87 @@
+/* One type scale and one motion rhythm across the portfolio. */
+:root{--muted:#b4b8ae;--motion-fast:.28s;--motion-ui:.5s;--motion-art:.95s;--motion-scene:.85s;--ease-out:cubic-bezier(.22,1,.36,1)}
+.micro-label,.eyebrow{line-height:1.7}
+.site-header nav a{font-size:12px;letter-spacing:.05em}.header-cv{font-size:11px}
+.hero-topline .eyebrow,.location{font-size:11px}.hero-intro .micro-label{font-size:11px}
+.hero-intro .text-link,.hero-caption-row .availability,.scroll-link,.featured-link{font-size:11px;line-height:1.6}
+.section-kicker{font-size:11px;letter-spacing:.08em;line-height:1.7}
+.section-heading-row>p{font-size:14px;line-height:1.9}.section-heading-row .muted{font-size:12px;line-height:1.8}
+.work-toolbar>.micro-label,.project-count{font-size:11px;letter-spacing:.08em}
+.project-meta h3 a{display:inline-block;padding:0;text-align:left;line-height:1.3}
+.project-meta h3 a:hover,.project-meta h3 a:focus-visible{color:var(--orange)}
+.project-meta p{font-family:Manrope,Arial,sans-serif;font-size:12px;line-height:1.75;letter-spacing:0;color:var(--muted);margin-top:9px}
+.project-meta>span,.image-index,.production-card .image-index{font-size:10px;line-height:1.6;letter-spacing:.05em}
+.production-cover-label{font-size:10px;line-height:1.6;max-width:calc(100% - 86px)}
+.production-card .production-source,.production-credit,.production-attribution{font-size:11px;line-height:1.8;letter-spacing:.02em}
+.work-end>span,.work-end .text-link,.social-work-links .text-link{font-size:11px;line-height:1.8}
+.about-copy>p:not(.about-lead){font-size:15px;line-height:1.95}.experience-row{font-size:14px;line-height:1.8}
+.tool-list{font-size:11px;line-height:1.8;gap:12px 20px}
+.contact-links a,.contact-links button,.contact-section .availability{font-size:11px;line-height:1.8}
+.site-footer>span,.site-footer>a:last-child{font-size:11px;line-height:1.8}
+.dialog-bar{gap:16px}.dialog-bar .micro-label{font-size:11px;letter-spacing:.08em}
+.dialog-tools{display:flex;align-items:center;gap:16px;flex-shrink:0}
+.project-share,.dialog-close{min-height:44px;font:12px var(--mono);letter-spacing:0;white-space:nowrap}
+.project-share{display:inline-flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--line);border-radius:4px}
+.project-share:hover{color:var(--orange);border-color:var(--orange)}
+.project-share-fallback{padding:16px 30px;border-bottom:1px solid var(--line)}.project-share-fallback[hidden]{display:none}
+.project-share-fallback label{display:block;margin-bottom:8px;font-size:12px;color:var(--muted)}
+.project-share-fallback input{width:100%;font:13px Manrope,Arial,sans-serif;background:#202522;color:var(--text);border:1px solid var(--line);padding:12px;border-radius:4px}
+.dialog-intro .eyebrow{font-size:12px;letter-spacing:.04em}.dialog-intro>p{font-size:14px;line-height:1.9}
+.project-media-toolbar .text-link{font-size:11px;line-height:1.8;min-height:40px}
+.dialog-foot{font-size:12px;line-height:1.9}.dialog-foot a{white-space:normal}
+.project-pagination a{display:flex;align-items:center;padding:28px 30px;min-height:88px;font:12px/1.8 var(--mono);letter-spacing:0;overflow-wrap:anywhere;transition:color var(--motion-fast),background var(--motion-ui)}
+.project-pagination a+a{text-align:right;justify-content:flex-end;border-left:1px solid var(--line)}
+.project-pagination a:hover,.project-pagination a:focus-visible{background:var(--orange);color:var(--bg)}
+.project-motion h3,.scene-heading h3{font-size:12px;letter-spacing:.08em}
+.project-motion figcaption,.project-scene p{font-size:12px;line-height:1.8;letter-spacing:0}
+.video-hint,.artwork-hint,.scene-start{font-size:11px;letter-spacing:.04em;line-height:1.6}
+#viewer-caption,#video-caption{font:12px/1.7 var(--mono);letter-spacing:0}
+.viewer-close,.viewer-controls{font-size:12px}.viewer-hint{font-size:11px}.motion-toggle{font-size:10px;letter-spacing:.05em}
+.project-image{transition:border-radius var(--motion-art) var(--ease-out),transform var(--motion-ui) var(--ease-out)}
+.motion-enabled .project-image{transition:transform var(--motion-ui) var(--ease-out),border-radius var(--motion-art) var(--ease-out)}
+.project-image img,.dialog-images .artwork-frame img,.video-preview .motion-preview{transition:transform var(--motion-art) var(--ease-out),filter var(--motion-ui)}
+.project-image>.motion-preview{transition:opacity var(--motion-ui) var(--ease-out)}
+.project-image .project-open{transition:transform var(--motion-ui) var(--ease-out),background var(--motion-ui),color var(--motion-fast),border-color var(--motion-ui)}
+.text-link:after,.site-header nav a:after,.contact-links a:after,.production-source:after{transition:transform var(--motion-ui) var(--ease-out)}
+.artwork-hint{transition:opacity var(--motion-ui),transform var(--motion-ui) var(--ease-out)}
+.video-hint{transition:background var(--motion-ui),transform var(--motion-ui) var(--ease-out)}
+.project-dialog-open .ambient-field,.project-dialog-open .ink-field,.project-dialog-open .pointer-ring,.project-dialog-open .hero-atmosphere{opacity:0!important}
+#project-dialog::backdrop{background:rgba(3,6,5,.91);backdrop-filter:blur(12px)}
+::view-transition-group(project-art){animation-duration:var(--motion-scene);animation-timing-function:var(--ease-out)}
+::view-transition-old(root){animation:polish-fade-out var(--motion-ui) ease both}
+::view-transition-new(root){animation:polish-fade-in var(--motion-scene) var(--ease-out) both}
+@keyframes polish-fade-out{to{opacity:0}}
+@keyframes polish-fade-in{from{opacity:0}to{opacity:1}}
+@media(hover:hover) and (pointer:fine){
+  .project-image:hover img,.project-image:focus-visible img{transform:scale(1.035);filter:brightness(1.035)}
+  .artwork-frame:hover img{transform:scale(1.015);filter:brightness(1.025)}
+}
+@media(max-width:1050px){.section-heading-row>p{font-size:13px}.hero-caption-row .availability,.featured-link,.scroll-link{font-size:10px}}
+@media(max-width:760px){
+  .site-header nav a{font-size:11px;letter-spacing:0}.hero-topline .eyebrow,.location{font-size:10px;letter-spacing:0}
+  .hero-intro .micro-label,.hero-intro .text-link{font-size:10px}.hero-caption-row .availability{font-size:9px}.featured-link{font-size:9px}
+  .hero-caption-row{gap:10px 14px}.hero-intro{bottom:200px}
+  .section-kicker,.section-kicker>span:last-child{font-size:10px;letter-spacing:.02em}
+  .section-heading-row>p{font-size:14px}.section-heading-row .muted{font-size:12px}
+  .work-toolbar>.micro-label,.project-count{font-size:10px}.project-meta h3{font-size:19px;line-height:1.3}
+  .project-meta p{font-size:11px;line-height:1.75}.image-index,.production-card .image-index{font-size:9px;letter-spacing:0}
+  .production-cover-label{font-size:9px}.production-card .production-source,.production-credit,.production-attribution{font-size:11px}
+  .work-end>span,.work-end .text-link,.social-work-links .text-link{font-size:10px;line-height:1.8}
+  .about-copy>p:not(.about-lead){font-size:14px}.about-lead{font-size:23px;line-height:1.6}
+  .contact-links{gap:14px 20px}.contact-links a,.contact-links button,.contact-section .availability{font-size:11px}
+  .site-footer>span,.site-footer>a:last-child{font-size:10px}
+  .dialog-bar{padding:10px 14px;gap:8px}.dialog-bar .micro-label{font-size:10px;letter-spacing:0}
+  .dialog-tools{gap:6px}.project-share,.dialog-close{font-size:11px;gap:8px;padding:7px 9px}
+  .dialog-intro .eyebrow{font-size:11px}.dialog-intro>p{font-size:14px}.dialog-foot{font-size:11px}
+  .project-pagination a{padding:22px 16px;font-size:11px;min-height:90px}
+  .project-motion figcaption,.project-scene p{font-size:11px}.video-hint,.artwork-hint,.scene-start{font-size:10px}
+  #viewer-caption,#video-caption{font-size:11px}.viewer-close,.viewer-controls{font-size:11px}
+  .project-share-fallback{padding:14px 20px}
+}
+@media(max-width:380px){.site-header nav a{font-size:10px}.hero-topline .eyebrow,.location{font-size:9px}.hero-intro{bottom:210px}.hero-caption-row .availability,.featured-link{font-size:10px}}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .project-image,.motion-enabled .project-image,.project-image img,.dialog-images .artwork-frame img,.video-preview .motion-preview,.project-image>.motion-preview,.artwork-hint,.video-hint,.project-image .project-open{transition:none}
+  .project-image:hover img,.project-image:focus-visible img,.artwork-frame:hover img{transform:none}
+  ::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}
+}

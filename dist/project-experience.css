@@ -1,0 +1,44 @@
+/* Project palettes stay in the interface and behind artwork. */
+#project-dialog{--project-base:12,21,18;--project-primary:58,130,106;--project-secondary:189,135,74;--project-accent:203,164,105;--project-bar-height:84px;--project-rail-height:105px;isolation:isolate;background-color:rgb(var(--project-base));background-image:radial-gradient(ellipse at 3% 12%,rgba(var(--project-primary),.16),transparent 48%),radial-gradient(ellipse at 95% 60%,rgba(var(--project-secondary),.12),transparent 55%);transition:background-color 1.2s var(--ease-out),border-color 1.2s;scrollbar-color:rgba(var(--project-accent),.5) rgb(var(--project-base))}
+.project-mood{position:sticky;top:0;height:0;z-index:0;pointer-events:none;overflow:visible}
+.project-mood-canvas{position:absolute;top:0;left:0;width:100%;height:94svh;pointer-events:none;opacity:.85}
+#project-dialog .dialog-bar{z-index:6;background:rgba(var(--project-base),.97);border-bottom-color:rgba(var(--project-accent),.18);transition:background-color 1.2s,border-color 1.2s}
+#project-dialog .dialog-intro,#project-dialog .project-media-toolbar,#project-dialog .dialog-images,#project-dialog .dialog-foot,#project-dialog .project-pagination,#project-dialog .project-share-fallback{position:relative;z-index:1}
+#project-dialog .dialog-intro .eyebrow{color:rgb(var(--project-accent));transition:color 1.2s}
+#project-dialog .project-motion,#project-dialog .project-scene{background:rgba(var(--project-base),.7)}
+#project-dialog .project-motion h3,#project-dialog .scene-heading h3{color:rgb(var(--project-accent))}
+.project-filmstrip{position:sticky;top:var(--project-bar-height);z-index:5;padding:12px 30px 13px;background:rgba(var(--project-base),.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(var(--project-accent),.2);transition:background-color 1.2s,border-color 1.2s;min-width:0}
+.filmstrip-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:9px;font:10px/1.5 var(--mono);letter-spacing:.08em;color:var(--muted)}
+.filmstrip-position{color:rgb(var(--project-accent));white-space:nowrap;font-size:10px;letter-spacing:.04em}
+.filmstrip-track{position:relative;display:flex;gap:9px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:rgba(var(--project-accent),.35) transparent;padding:2px 1px 5px;min-width:0;-webkit-overflow-scrolling:touch}
+.filmstrip-item{position:relative;flex:0 0 74px;width:74px;height:52px;padding:0;overflow:hidden;border:1px solid #ffffff25;border-radius:4px;background:#080c0b;transition:border-color .35s,opacity .35s,box-shadow .35s;opacity:.65}
+.filmstrip-item img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease-out)}
+.filmstrip-badge{position:absolute;inset:auto 0 0;background:linear-gradient(transparent,#000d);color:#fff;font:10px/1.7 var(--mono);text-align:left;padding:4px 6px 1px}
+.filmstrip-item[aria-current=true]{border-color:rgb(var(--project-accent));box-shadow:0 0 0 1px rgba(var(--project-accent),.3);opacity:1}
+.filmstrip-item:focus-visible{outline-offset:2px;outline-color:rgb(var(--project-accent))}
+#project-dialog .dialog-images>.artwork-frame,#project-dialog .project-motion,#project-dialog .project-motion figure,#project-dialog .project-scene{scroll-margin-top:calc(var(--project-bar-height) + var(--project-rail-height) + 12px)}
+#project-dialog .project-pagination{padding:30px;gap:20px;border-top:1px solid rgba(var(--project-accent),.18);background:rgba(var(--project-base),.7)}
+#project-dialog .project-pagination .project-route-card{position:relative;display:block;isolation:isolate;aspect-ratio:1.85;min-height:0;padding:0;overflow:hidden;border:1px solid #ffffff25;border-radius:7px;background:#090b0b;text-align:left;color:var(--text);transition:border-color .5s,border-radius .8s var(--ease-out)}
+.project-route-card>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .95s var(--ease-out),filter .6s;filter:brightness(.8)}
+.project-route-card:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#0003,transparent 25%,#0005 55%,#000e 100%);pointer-events:none;z-index:1}
+.route-card-content{position:absolute;z-index:2;inset:0;padding:24px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;text-align:left;gap:36px}
+.route-card-eyebrow{font:11px/1.6 var(--mono);letter-spacing:.06em}
+.route-card-title{font-family:var(--display);font-size:clamp(26px,3.4vw,40px);line-height:1.05;letter-spacing:-.015em;max-width:100%}
+@media(hover:hover) and (pointer:fine){
+  .filmstrip-item:hover{opacity:1;border-color:rgb(var(--project-accent))}.filmstrip-item:hover img{transform:scale(1.08)}
+  #project-dialog .project-route-card:hover{border-color:rgba(var(--project-accent),.75);border-radius:18px;background:#090b0b;color:var(--text)}
+  .project-route-card:hover>img{transform:scale(1.045);filter:brightness(.97)}
+}
+@media(max-width:760px){
+  #project-dialog{--project-bar-height:68px;--project-rail-height:94px}
+  .project-filmstrip{padding:9px 16px 8px}.filmstrip-heading{font-size:9px;letter-spacing:.02em;gap:10px;margin-bottom:6px}.filmstrip-position{font-size:9px}
+  .filmstrip-track{gap:7px;padding-bottom:3px}.filmstrip-item{flex-basis:62px;width:62px;height:46px}.filmstrip-badge{font-size:9px;padding-left:5px}
+  #project-dialog .dialog-intro{padding-top:30px}
+  #project-dialog .project-pagination{padding:20px 16px;gap:12px;grid-template-columns:1fr}
+  #project-dialog .project-pagination .project-route-card{aspect-ratio:1.85;min-height:150px}
+  .route-card-content{padding:20px;gap:24px}.route-card-title{font-size:32px}.route-card-eyebrow{font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){
+  #project-dialog,#project-dialog .dialog-bar,.project-filmstrip,#project-dialog .dialog-intro .eyebrow,.filmstrip-item,.filmstrip-item img,#project-dialog .project-route-card,.project-route-card>img{transition:none}
+  .project-mood-canvas{display:none}.project-route-card:hover>img,.filmstrip-item:hover img{transform:none}
+}

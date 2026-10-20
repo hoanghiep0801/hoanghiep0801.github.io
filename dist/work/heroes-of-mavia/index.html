@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <base href="../../">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101111">
+  <meta name="description" content="My contribution: selected 3D character assets for Heroes of Mavia at Skrice Studios. These portfolio presentations show pirate-themed characters, sculpting, wireframe, UV and level-of-detail breakdowns. Mavia Mini contributions are presented as a separate project.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Heroes of Mavia — Hoang Hiep</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/hero/hero-desktop.webp?v=sharp-20261020-1" as="image" media="(min-width:761px)" fetchpriority="high">
+  <link rel="preload" href="assets/hero/hero-mobile.webp?v=sharp-20261020-1" as="image" media="(max-width:760px)" fetchpriority="high">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="effects.css">
+  <link rel="stylesheet" href="feedback.css">
+  <link rel="stylesheet" href="polish.css">
+  <link rel="stylesheet" href="project-experience.css">
+  <link rel="stylesheet" href="hero-reel.css">
+  <script src="app.js" defer></script>
+  <script src="media.js" defer></script>
+  <script src="routing.js" defer></script>
+  <script src="hero-timeline.js?v=sharp-20261020-1" defer></script>
+  <script src="hero-reel.js?v=sharp-20261020-1" defer></script>
+  <script src="navigation-assets.js" defer></script>
+  <script src="project-experience.js" defer></script>
+  <script src="smoke.js" defer></script>
+  <script src="effects.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#work">Skip to selected work</a>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Hoang Hiep, home">HOANG HIEP<span class="brand-dot" aria-hidden="true"></span></a>
+    <nav aria-label="Main navigation">
+      <a href="#work">WORK <sup>01</sup></a>
+      <a href="#about">ABOUT <sup>02</sup></a>
+      <a href="#contact">CONTACT <sup>03</sup></a>
+    </nav>
+    <a class="header-cv" href="assets/Do-Hoang-Hiep-CV.pdf" target="_blank" rel="noopener">DOWNLOAD CV <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-name">
+      <picture class="hero-poster">
+        <source media="(max-width:760px)" srcset="assets/hero/hero-mobile.webp?v=sharp-20261020-1">
+        <img class="hero-art" src="assets/hero/hero-desktop.webp?v=sharp-20261020-1" alt="Viking Lord — 3D artwork by Hoang Hiep" fetchpriority="high" width="1920" height="1080">
+      </picture>
+      <video id="hero-reel" class="hero-reel" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-vapor" aria-hidden="true"></div>
+      <a class="hero-art-link" draggable="false" data-project="warrior" href="work/viking-lord/" aria-label="Explore Viking Lord project">
+        <span class="hero-explore-label">EXPLORE <span id="hero-explore-title">Viking Lord</span> ↗</span>
+      </a>
+      <div class="hero-topline">
+        <p class="eyebrow"><span class="slant-mark" aria-hidden="true">///</span> 3D CHARACTER ARTIST</p>
+        <span class="location">HANOI, VIETNAM <span aria-hidden="true">↗</span></span>
+      </div>
+      <div class="hero-intro">
+        <span class="micro-label">SCULPT. SHAPE. BRING TO LIFE.</span>
+        <p>Realistic &amp; stylized characters.<br>Crafted for games and film.</p>
+        <a class="text-link" href="#work">EXPLORE MY WORK <span aria-hidden="true">↘</span></a>
+        <div class="hero-feature" aria-label="Featured project">
+          <span class="micro-label">NOW FEATURING <span id="hero-shot-count">01 / 07</span></span>
+          <span id="hero-shot-title">Viking Lord</span>
+          <div class="hero-reel-controls" role="group" aria-label="Showreel controls">
+            <button type="button" id="hero-prev" aria-label="Previous featured project">←</button>
+            <div class="hero-chapters" role="group" aria-label="Choose a featured project">
+              <button type="button" data-hero-shot="0" aria-label="Feature Viking Lord" aria-pressed="true"><span></span></button>
+              <button type="button" data-hero-shot="1" aria-label="Feature Iron Tiger" aria-pressed="false"><span></span></button>
+              <button type="button" data-hero-shot="2" aria-label="Feature Bloom in the Dark" aria-pressed="false"><span></span></button>
+              <button type="button" data-hero-shot="3" aria-label="Feature Male Angel" aria-pressed="false"><span></span></button>
+              <button type="button" data-hero-shot="4" aria-label="Feature NZ-666 Kshatriya" aria-pressed="false"><span></span></button>
+              <button type="button" data-hero-shot="5" aria-label="Feature Arttoy Valentine" aria-pressed="false"><span></span></button>
+              <button type="button" data-hero-shot="6" aria-label="Feature Happy Mid-Autumn Festival" aria-pressed="false"><span></span></button>
+            </div>
+            <button type="button" id="hero-next" aria-label="Next featured project">→</button>
+            <button type="button" id="hero-play" aria-label="Pause showreel">Ⅱ</button>
+          </div>
+          <div class="hero-timeline">
+            <label class="hero-timeline-label" for="hero-scrub">DRAG TO EXPLORE <span id="hero-time">00:00 / 00:12</span></label>
+            <input id="hero-scrub" type="range" min="0" max="12" step="0.033333" value="0" aria-label="Seek showreel" aria-valuetext="Viking Lord, 0 of 12 seconds">
+          </div>
+        </div>
+      </div>
+      <div class="hero-bottom">
+        <div class="hero-name-row">
+          <h1 id="hero-name">HOANG HIEP<span class="name-star" aria-hidden="true">*</span></h1>
+        </div>
+        <div class="hero-caption-row">
+          <a class="availability" href="#contact"><span class="status-dot" aria-hidden="true"></span> OPEN TO OPPORTUNITIES</a>
+          <a class="featured-link" data-project="warrior" href="work/viking-lord/">VIEW PROJECT / VIKING LORD <span aria-hidden="true">↗</span></a>
+          <a class="scroll-link" href="#work">SCROLL TO DISCOVER <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="work-section section-pad" aria-labelledby="work-title">
+      <div class="section-kicker"><span>01 / SELECTED WORK</span><span>SCULPTING · MODELING · TEXTURING</span></div>
+      <div class="section-heading-row">
+        <h2 id="work-title">CHARACTERS.<br><span class="outline-text">WITH CHARACTER.</span></h2>
+        <p>Personal explorations, from grounded realism<br class="desktop-break"> to stylized worlds.<br><span class="muted">Different worlds. The same attention to detail.</span></p>
+      </div>
+      <div class="work-toolbar">
+        <span class="micro-label">PERSONAL PROJECTS</span>
+        <span class="project-count" aria-live="polite">08 PROJECTS</span>
+      </div>
+      <div class="project-grid">
+        <article class="project-card wide-card" data-category="realistic">
+          <a class="project-image image-warrior" data-project="warrior" aria-label="View Viking Lord project" href="work/viking-lord/">
+            <img src="assets/warrior-card.webp" alt="Realistic warrior in a forest, showing face, armor, and materials" width="1800" height="1060" loading="lazy">
+            <span class="image-index">01 / SELECTED WORK</span><span class="project-open" aria-hidden="true">↗</span>
+          </a>
+          <div class="project-meta"><div><h3><a data-project="warrior" href="work/viking-lord/">Viking Lord</a></h3><p>Personal project · Realistic character study</p></div><span>01</span></div>
+        </article>
+        <article class="project-card portrait-card" data-category="stylized">
+          <a class="project-image image-summer" data-project="summer" aria-label="View Bloom in the Dark project" href="work/bloom-in-the-dark/">
+            <img src="assets/summer-card.webp" alt="Stylized woman with a summer hat, blue flowers, and purple hair" width="800" height="1200" loading="lazy">
+            <span class="image-index">02 / SELECTED WORK</span><span class="project-open" aria-hidden="true">↗</span>
+          </a>
+          <div class="project-meta"><div><h3><a data-project="summer" href="work/bloom-in-the-dark/">Bloom in the Dark</a></h3><p>Personal project · Stylized portrait & look development</p></div><span>02</span></div>
+        </article>
+        <article class="project-card" data-category="stylized">
+          <a class="project-image image-tiger" data-project="tiger" aria-label="View Iron Tiger project" href="work/iron-tiger/">
+            <img src="assets/tiger-card.webp" alt="White armored tiger posed with a blade against a deep red background" width="1800" height="1220" loading="lazy">
+            <span class="image-index">03 / SELECTED WORK</span><span class="project-open" aria-hidden="true">↗</span>
+          </a>
+          <div class="project-meta"><div><h3><a data-project="tiger" href="work/iron-tiger/">Iron Tiger</a></h3><p>Personal project · Creature & samurai armor</p></div><span>03</span></div>
+        </article>
+        <article class="project-card" data-category="hardsurface">
+          <a class="project-image image-mech" data-project="kshatriya" aria-label="View NZ-666 Kshatriya project" href="work/nz-666-kshatriya/">
+            <img src="assets/projects/kshatriya/space-render.webp" alt="A detailed green NZ-666 Kshatriya mecha model with mechanical armor and weapons" width="2400" height="1350" loading="lazy">
+            <span class="image-index">04 / SELECTED WORK</span><span class="project-open" aria-hidden="true">↗</span>
+          </a>
+          <div class="project-meta"><div><h3><a data-project="kshatriya" href="work/nz-666-kshatriya/">NZ-666 Kshatriya</a></h3><p>Personal project · Mecha modeling</p></div><span>04</span></div>
+        </article>
+        <article class="project-card" data-category="stylized">
+          <a class="project-image image-arttoy" data-project="arttoy" aria-label="View Arttoy Valentine project" href="work/arttoy-valentine/">
+            <img src="assets/arttoy-pair.webp" alt="Two stylized Valentine art toy characters with purple hair, wings, roses, and pink hearts" width="1800" height="1800" loading="lazy">
+            <span class="image-index">05 / SELECTED WORK</span><span class="project-open" aria-hidden="true">↗</span>
+          </a>
+          <div class="project-meta"><div><h3><a data-project="arttoy" href="work/arttoy-valentine/">Arttoy Valentine</a></h3><p>Personal project · Stylized art toys</p></div><span>05</span></div>
+        </article>
+        <article class="project-card" data-category="stylized">
+          <a class="project-image image-autumn" data-project="autumn" aria-label="View Happy Mid-Autumn project" href="work/happy-mid-autumn-festival/">
+            <img src="assets/projects/autumn/cover.webp" alt="A playful Mid-Autumn festival diorama with a child, lantern, and lion dance props" width="655" height="638" loading="lazy">
+            <span class="image-index">06 / SELECTED WORK</span><span class="project-open" aria-hidden="true">↗</span>
+          </a>
+          <div class="project-meta"><div><h3><a data-project="autumn" href="work/happy-mid-autumn-festival/">Happy Mid-Autumn Festival</a></h3><p>Personal project · Character & diorama</p></div><span>06</span></div>
+        </article>
+        <article class="project-card" data-category="stylized">
+          <a class="project-image image-angel" data-project="angel" aria-label="View Male Angel project" href="work/male-angel/">
+            <img src="assets/projects/angel/render.webp" alt="Male Angel character with white feathered wings and gold-trimmed armor" width="2560" height="1440" loading="lazy">
+            <span class="image-index">07 / SELECTED WORK</span><span class="project-open" aria-hidden="true">↗</span>
+          </a>
+          <div class="project-meta"><div><h3><a data-project="angel" href="work/male-angel/">Male Angel</a></h3><p>Personal project · Fantasy character</p></div><span>07</span></div>
+        </article>
+        <article class="project-card" data-category="hardsurface">
+          <a class="project-image image-sword" data-project="snake" aria-label="View Snake Sword project" href="work/snake-sword/">
+            <img src="assets/projects/snake-sword/front.webp" alt="Stylized Snake Sword with a colorful snake-shaped guard and luminous blue curved blade" width="1185" height="2560" loading="lazy">
+            <span class="image-index">08 / SELECTED WORK</span><span class="project-open" aria-hidden="true">↗</span>
+          </a>
+          <div class="project-meta"><div><h3><a data-project="snake" href="work/snake-sword/">Snake Sword</a></h3><p>Personal project · Stylized weapon</p></div><span>08</span></div>
+        </article>
+      </div>
+      <div class="work-end"><span>MORE CHARACTERS. MORE STORIES.</span><div class="social-work-links"><a class="text-link" href="https://www.artstation.com/hoang_hiep" target="_blank" rel="noopener">ARTSTATION <span aria-hidden="true">↗</span></a><a class="text-link" href="https://www.instagram.com/do_hoang_hiep/" target="_blank" rel="noopener">INSTAGRAM / PROCESS <span aria-hidden="true">↗</span></a></div></div>
+    </section>
+
+    <section id="production" class="production-section section-pad" aria-labelledby="production-title">
+      <div class="section-kicker"><span>PRODUCTION / SELECTED CONTRIBUTIONS</span><span>CHARACTERS &amp; ASSETS · TEAM PROJECTS</span></div>
+      <div class="section-heading-row"><h2 id="production-title">PART OF<br><span class="outline-text">A BIGGER WORLD.</span></h2><p>Characters and assets contributed to team productions.<br><span class="muted">My assets, in the worlds we build together.</span></p></div>
+      <div class="production-grid">
+        <article class="production-card">
+          <a class="project-image production-image cover-mavia" data-project="mavia" aria-label="View Heroes of Mavia character contribution" href="work/heroes-of-mavia/">
+            <img src="assets/production/heroes-of-mavia-cover.webp" alt="Official Heroes of Mavia game artwork featuring its cast of characters" width="599" height="337" loading="lazy">
+            <span class="image-index">01 / SKRICE STUDIOS</span><span class="production-cover-label">EXPLORE MY CONTRIBUTION</span><span class="project-open" aria-hidden="true">↗</span>
+          </a>
+          <div class="project-meta"><div><h3><a data-project="mavia" href="work/heroes-of-mavia/">Heroes of Mavia</a></h3><p>My contribution · 3D character art</p></div><a class="production-source" href="https://www.mavia.com/vn" target="_blank" rel="noopener">OFFICIAL SITE ↗</a></div>
+        </article>
+        <article class="production-card">
+          <a class="project-image production-image cover-mini" data-project="maviamini" aria-label="View Mavia Mini character contribution" href="work/mavia-mini/">
+            <img src="assets/production/mavia-mini-cover.webp" alt="Mavia Mini characters exploring a bright world with a glowing blue portal" width="944" height="544" loading="lazy">
+            <span class="image-index">02 / SKRICE STUDIOS</span><span class="production-cover-label">EXPLORE MY CONTRIBUTION</span><span class="project-open" aria-hidden="true">↗</span>
+          </a>
+          <div class="project-meta"><div><h3><a data-project="maviamini" href="work/mavia-mini/">Mavia Mini</a></h3><p>My contribution · 3D character art</p></div><a class="production-source" href="https://www.nexira.ai/games/mavia-mini?gameId=4&amp;tab=collections" target="_blank" rel="noopener">GAME PAGE ↗</a></div>
+        </article>
+        <article class="production-card">
+          <a class="project-image production-image cover-block" data-project="blockclans" aria-label="View Block Clans character and weapon contribution" href="work/block-clans/">
+            <img src="assets/production/block-clans-cover.webp" alt="Official Block Clans banner showing the game logo and its characters" width="960" height="205" loading="lazy">
+            <span class="image-index">03 / BLOCK CLANS</span><span class="production-cover-label">EXPLORE MY CONTRIBUTION</span><span class="project-open" aria-hidden="true">↗</span>
+          </a>
+          <div class="project-meta"><div><h3><a data-project="blockclans" href="work/block-clans/">Block Clans</a></h3><p>My contribution · Characters &amp; weapons</p></div><a class="production-source" href="https://www.nexira.ai/games/block-clans?gameId=3&amp;tab=overview" target="_blank" rel="noopener">GAME PAGE ↗</a></div>
+          <p class="production-credit"><a href="https://www.youtube.com/watch?v=2kxrkgQo5kM&amp;t=17s" target="_blank" rel="noopener">Official trailer ↗</a> · Produced by Pentacore Studio.</p>
+        </article>
+      </div>
+      <p class="production-attribution">Covers use official game imagery. Project views show my selected contributions.</p>
+    </section>
+
+    <section id="about" class="about-section section-pad" aria-labelledby="about-title">
+      <div class="section-kicker"><span>02 / THE ARTIST</span><span>BASED IN HANOI · VIETNAM</span></div>
+      <div class="about-layout">
+        <div class="about-heading"><h2 id="about-title">BEHIND<br>THE <span class="outline-text">CHARACTER.</span></h2><a class="text-link" href="assets/Do-Hoang-Hiep-CV.pdf" target="_blank" rel="noopener">DOWNLOAD MY CV <span aria-hidden="true">↗</span></a></div>
+        <div class="about-copy"><p class="about-lead">I'm Hiep, a 3D character artist with 3+ years of experience bringing characters into game worlds.</p><p>My work spans realistic and stylized characters, from sculpting and modeling to PBR texturing, lighting, and real-time asset preparation. I enjoy the space where a strong silhouette, thoughtful materials, and small details make a character feel alive.</p><div class="experience-row"><span>SKRICE STUDIOS</span><div>3D Character Artist<br><span class="muted">2023 — Present</span></div></div><div class="experience-row"><span>FREELANCE</span><div>3D Artist<br><span class="muted">Games, film &amp; 3D printing</span></div></div><div class="tool-list" aria-label="Primary tools"><span>ZBRUSH</span><span>MAYA</span><span>SUBSTANCE PAINTER</span><span>MARMOSET TOOLBAG</span><span>UNITY</span></div></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section section-pad" aria-labelledby="contact-title">
+      <div class="section-kicker"><span>03 / NEXT CHAPTER</span><span class="availability"><span class="status-dot" aria-hidden="true"></span> OPEN TO OPPORTUNITIES</span></div>
+      <div class="contact-heading-row"><h2 id="contact-title">LET'S BUILD<br><span class="outline-text">YOUR NEXT WORLD.</span></h2><a class="contact-arrow" href="mailto:hhiep.work@gmail.com" aria-label="Email Hoang Hiep">↗</a></div>
+      <div class="contact-bottom"><div><p>Have a role or a project in mind?</p><a class="email-link" href="mailto:hhiep.work@gmail.com">hhiep.work@gmail.com</a></div><div class="contact-links"><a href="https://www.artstation.com/hoang_hiep" target="_blank" rel="noopener">ARTSTATION ↗</a><a href="https://www.instagram.com/do_hoang_hiep/" target="_blank" rel="noopener">INSTAGRAM ↗</a><a href="assets/Do-Hoang-Hiep-CV.pdf" target="_blank" rel="noopener">RESUME ↗</a><button id="copy-email" type="button">COPY EMAIL ↗</button></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="wordmark" href="#top">HOANG HIEP<span class="brand-dot" aria-hidden="true"></span></a><span>© 2026 DO HOANG HIEP</span><a href="#top">BACK TO TOP ↑</a></footer>
+
+  <dialog id="project-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-bar"><span class="micro-label">PROJECT VIEW</span><div class="dialog-tools"><button id="copy-project-link" class="project-share" type="button">Copy link <span aria-hidden="true">↗</span></button><button class="dialog-close" type="button" aria-label="Close project">Close <span aria-hidden="true">×</span></button></div></div>
+    <div class="project-share-fallback" hidden><label for="project-url">Project link</label><input id="project-url" type="url" readonly></div>
+    <div class="dialog-intro"><div><p id="dialog-category" class="eyebrow"></p><h2 id="dialog-title"></h2></div><p id="dialog-description"></p></div>
+    <div id="dialog-images" class="dialog-images"></div>
+    <div class="dialog-foot"><span id="dialog-credit"></span><div class="dialog-actions"><a id="dialog-source" target="_blank" rel="noopener" hidden>VIEW ORIGINAL PROJECT ↗</a><a href="mailto:hhiep.work@gmail.com">DISCUSS A PROJECT ↗</a></div></div>
+  </dialog>
+  <dialog id="image-viewer" class="image-viewer" aria-label="Full-size artwork viewer" aria-describedby="viewer-caption">
+    <div class="viewer-bar"><span id="viewer-caption" aria-live="polite"></span><button type="button" class="viewer-close" aria-label="Close full-size image">CLOSE <span aria-hidden="true">×</span></button></div>
+    <div class="viewer-stage"><img id="viewer-image" alt=""></div>
+    <div class="viewer-controls"><button type="button" id="viewer-prev" aria-label="Previous image">← PREVIOUS</button><span class="viewer-hint">SWIPE OR USE ← →</span><button type="button" id="viewer-next" aria-label="Next image">NEXT →</button></div>
+  </dialog>
+  <dialog id="video-viewer" class="image-viewer video-viewer" aria-labelledby="video-caption">
+    <div class="viewer-bar"><span id="video-caption"></span><button type="button" class="viewer-close video-close" aria-label="Close video">CLOSE <span aria-hidden="true">×</span></button></div>
+    <div class="video-stage"><video id="full-video" controls playsinline preload="metadata"></video></div>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
+
+
