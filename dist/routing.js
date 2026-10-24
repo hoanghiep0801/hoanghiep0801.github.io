@@ -1,5 +1,5 @@
 'use strict';
-const projectSlugs={warrior:'viking-lord',summer:'bloom-in-the-dark',tiger:'iron-tiger',kshatriya:'nz-666-kshatriya',arttoy:'arttoy-valentine',autumn:'happy-mid-autumn-festival',angel:'male-angel',snake:'snake-sword',mavia:'heroes-of-mavia',maviamini:'mavia-mini',blockclans:'block-clans'};
+const projectSlugs={warrior:'viking-lord',summer:'bloom-in-the-dark',tiger:'iron-tiger',kshatriya:'nz-666-kshatriya',arttoy:'arttoy-valentine',autumn:'happy-mid-autumn-festival',angel:'male-angel',snake:'snake-sword',relics:'elemental-relics',mavia:'heroes-of-mavia',maviamini:'mavia-mini',blockclans:'block-clans'};
 const portfolioBase=new URL('.',document.baseURI);
 // Freeze the asset base before history changes the address to a project URL.
 document.querySelector('base').href=portfolioBase.href;

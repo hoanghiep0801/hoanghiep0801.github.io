@@ -211,9 +211,52 @@ const projects = {
     "credit": "Selected character assets: Do Hoang Hiep · Team production: Skrice Studios / Mavia Mini",
     "source": "https://www.nexira.ai/games/mavia-mini?gameId=4&tab=collections",
     "sourceLabel": "VIEW MAVIA MINI ↗"
+  },
+  "relics": {
+    "title": "Elemental Relics",
+    "category": "PERSONAL / STYLIZED WEAPON COLLECTION",
+    "description": "Four stylized fantasy weapons, exploring weathered copper, glowing magma, flame-touched wood, and flowing water. A personal 3D interpretation of existing 2D concepts, presented through still renders and four motion studies.",
+    "images": [
+      "projects/elemental-relics/collection.webp",
+      "projects/elemental-relics/verdigris.webp",
+      "projects/elemental-relics/magma.webp",
+      "projects/elemental-relics/wildfire.webp",
+      "projects/elemental-relics/tide.webp"
+    ],
+    "credit": "3D artwork: Do Hoang Hiep · Based on 2D concepts by other artists.",
+    "videos": [
+      {
+        "src": "projects/elemental-relics/verdigris.mp4",
+        "poster": "projects/elemental-relics/verdigris.webp",
+        "label": "Elemental Relics / Verdigris / weapon 01",
+        "width": 1080,
+        "height": 1350
+      },
+      {
+        "src": "projects/elemental-relics/magma.mp4",
+        "poster": "projects/elemental-relics/magma.webp",
+        "label": "Elemental Relics / Magma / weapon 02",
+        "width": 1080,
+        "height": 1350
+      },
+      {
+        "src": "projects/elemental-relics/wildfire.mp4",
+        "poster": "projects/elemental-relics/wildfire.webp",
+        "label": "Elemental Relics / Wildfire / weapon 03",
+        "width": 1080,
+        "height": 1350
+      },
+      {
+        "src": "projects/elemental-relics/tide.mp4",
+        "poster": "projects/elemental-relics/tide.webp",
+        "label": "Elemental Relics / Tide / weapon 04",
+        "width": 1080,
+        "height": 1350
+      }
+    ]
   }
 };
-const imageSizes = {"projects/warrior/full-body.webp": [1920, 1920], "projects/warrior/portrait.webp": [1920, 1920], "projects/angel/render.webp": [2560, 1440], "projects/angel/breakdown.webp": [1919, 988], "arttoy-pair.webp": [1800, 1800], "arttoy-girl.webp": [1800, 1800], "arttoy-boy.webp": [1800, 1800], "projects/kshatriya/space-render.webp": [1920, 1080], "projects/blockclans/launcher.webp": [1280, 720], "projects/blockclans/flamethrower.webp": [1280, 720], "projects/blockclans/chainsaw.webp": [1280, 720], "projects/blockclans/rifle.webp": [1280, 720], "projects/snake-sword/front.webp": [1185, 2560], "projects/snake-sword/side.webp": [1185, 2560], "projects/snake-sword/back.webp": [1185, 2560]};
+const imageSizes = {"projects/warrior/full-body.webp": [1920, 1920], "projects/warrior/portrait.webp": [1920, 1920], "projects/angel/render.webp": [2560, 1440], "projects/angel/breakdown.webp": [1919, 988], "arttoy-pair.webp": [1800, 1800], "arttoy-girl.webp": [1800, 1800], "arttoy-boy.webp": [1800, 1800], "projects/kshatriya/space-render.webp": [1920, 1080], "projects/blockclans/launcher.webp": [1280, 720], "projects/blockclans/flamethrower.webp": [1280, 720], "projects/blockclans/chainsaw.webp": [1280, 720], "projects/blockclans/rifle.webp": [1280, 720], "projects/snake-sword/front.webp": [1185, 2560], "projects/snake-sword/side.webp": [1185, 2560], "projects/snake-sword/back.webp": [1185, 2560], "projects/elemental-relics/verdigris.webp": [1080, 1350], "projects/elemental-relics/magma.webp": [1080, 1350], "projects/elemental-relics/wildfire.webp": [1080, 1350], "projects/elemental-relics/tide.webp": [1080, 1350], "projects/elemental-relics/collection.webp": [2160, 1000]};
 const dialog=document.getElementById('project-dialog');
 const dialogTitle=document.getElementById('dialog-title');
 const dialogCategory=document.getElementById('dialog-category');
@@ -222,7 +265,7 @@ const dialogImages=document.getElementById('dialog-images');
 const dialogCredit=document.getElementById('dialog-credit');
 const dialogSource=document.getElementById('dialog-source');
 const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
-const projectOrder=['warrior','summer','tiger','kshatriya','arttoy','autumn','angel','snake','mavia','maviamini','blockclans'];
+const projectOrder=['warrior','summer','tiger','kshatriya','arttoy','autumn','angel','snake','relics','mavia','maviamini','blockclans'];
 let currentProject;
 let projectTrigger;
 const imagePath=num=>typeof num==='number'?`assets/portfolio-${String(num).padStart(2,'0')}.webp`:`assets/${num}`;
